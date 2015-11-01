@@ -25,7 +25,7 @@ public class WebServerMain {
     public static void main(String[] args) {
     	
     	System.out.println("Jibble web server (modified by Lam Kim Sim 010876 for G53SQM)");
-    	System.out.println("Root Directory: C:\\Users\\LAMLAMLAM\\git localhost\\g53sqm.jibble\\webfiles");
+    	System.out.println("Root Directory: C:\\Users\\LAMLAMLAM\\git localhost\\g53sqm.jibble");
     	System.out.println("Port: 8088 ");
         
         String rootDir = WebServerConfig.DEFAULT_ROOT_DIRECTORY;

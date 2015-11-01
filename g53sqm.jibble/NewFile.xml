@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="g53sqm">
+<project name="TimPong">
 
 <target name="clean">
 	<delete dir = "build"/>
@@ -13,26 +13,16 @@
 </target>
 
 <target name="jar" depends = "compile">
-	<mkdir dir="build/jar"/>
-	<jar destfile="build/jar/jibble.jar" basedir="build/classes">
+	
+	<jar destfile="jibble.jar" basedir="build/classes">
 		<manifest>
-			<attribute name="Main-Class" value="jibble.Main"/>
+			<attribute name="Main-Class" value="WebServerMain"/>
 		</manifest>
 	</jar>
 </target>
-<target name="help">
-    <echo>You can use the following targets:</echo>
-    <echo> </echo>
-    <echo>  help    : (default) Prints this message </echo>
-    <echo>  makejar : Cleans, compiles, and packages application into jar</echo>
-    <echo>  clean   : Deletes work directories</echo>
-    <echo>  compile : Compiles servlets into class files</echo>
-  </target>
 
 <target name = "run" depends = "jar">
 	<java jar = "build/jar/jibble.jar" fork="true"/>
 </target>
-
-
 
 </project>
